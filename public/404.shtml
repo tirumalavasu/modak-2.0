@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>Modak - Page not found</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8">
+    <link rel="icon" href="img/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow" />
+	    <meta name="author" content="Modak">
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta property="og:type" content="Modak" />
+	<meta property="og:url" content="https://modak.com/"/>
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image" content="https://modak.com/img/backgrounds/logo.png" />
+    <meta name="msapplication-TileImage" content="https://modak.com/img/favicon.ico"/>
+    <!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp -->
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+	<!-- CSS FILES -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300,400,500,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css">
+	<link rel="stylesheet" type="text/css" href="https://modak.com/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="https://modak.com/css/header.css">
+	<link rel="stylesheet" type="text/css" href="https://modak.com/css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="https://modak.com/css/home.css">
+	<link rel="stylesheet" type="text/css" href="https://modak.com/css/global.css">
+	<link rel="stylesheet" type="text/css" href="https://modak.com/css/responsive.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147747299-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-147747299-1');
+    </script>
+    <meta name="google-site-verification" content="FBq12OBSFEIv73yIdgbLPqu0bVsvYsyoYmqGaQ1le1Y" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script> 
+     <script>  
+        $(function(){ 
+          $("#footer").load("footer.html");  
+        }); 
+     </script>
+</head>
+                                        
+<body>
+	<div class="overlay" id="overlay">
+		<div class="spinner">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+			<div class="rect4"></div>
+			<div class="rect5"></div>
+		</div>
+
+		<h1 class="uk-text-center">
+		<!--<img src="./img/logos/Modak Logo_FinalSVG.svg" alt="Modak" width="344" height="60" />-->
+			<img src="https://modak.com/img/logos/Modak%20Logo_FinalSVG.svg" alt="Modak" width="344" height="60" />
+	    </h1>
+	</div>
+	<div id="mainPage">
+		<!-- NAV -->
+		<div id="header-xs" class="uk-hidden@l">
+			<nav class="uk-navbar uk-navbar-container">
+				<div class="uk-navbar-left">
+					<a class="uk-navbar-toggle" href="#">
+						<span uk-navbar-toggle-icon uk-toggle="target: #offcanvas-nav"></span> <span class="uk-margin-small-left">
+							<a class="uk-navbar-item uk-logo" href="/">
+								<!--<img src="./img/logos/Modak Logo_FinalSVG.svg" id="modakLogo" alt="Modak"/>-->
+								<img src="https://modak.com/img/logos/Modak%20Logo_FinalSVG.svg" id="modakLogo" alt="Modak"/>
+							</a>
+						</span>
+					</a>
+					<a class="uk-button uk-button-primary Contactbutton" href="https://modak.com/contact-us.html">Contact us</a>
+					<div id="offcanvas-nav" uk-offcanvas="overlay: true">
+						<div class="uk-offcanvas-bar">
+							<ul class="uk-nav uk-nav-default">
+								<li class="uk-nav-header">About us</li>
+								<li class="uk-parent">
+									<ul class="uk-nav-sub">
+										<li><a href="https://modak.com/about.html">About Modak</a></li>
+										<li><a href="https://modak.com/key-differentiator.html">Key Differentiator</a></li>
+										<li><a href="https://modak.com/global-presence.html">Global Presence</a></li>
+									</ul>
+								</li>
+								<li class="uk-nav-header">Solutions</li>
+								<li class="uk-parent">
+									<ul class="uk-nav-sub">
+											<li><a href="https://modak.com/managed-dataops.html">Managed DataOps</a></li>
+											<li><a href="https://modak.com/data-fabric.html">Data Fabric</a></li>
+										<li><a href="https://modak.com/Metaprogramming.html">Metaprogramming</a></li>
+										<li><a href="https://modak.com/governed-datalake.html">Governed Data Lake</a></li>
+										<li><a href="https://modak.com/data-visualisation.html">Data Visualization</a></li>
+										<li><a href="https://modak.com/data-migration.html">Data Migration</a></li>
+										<li><a href="https://modak.com/hadoop-managed-services.html">Hadoop Managed Services</a></li>
+										<li class="uk-parent">
+											<a href="javascript:void(0)" class="uk-active">Augmented Data Preparation</a>
+											<ul class="uk-nav-sub">
+												<li><a href="https://modak.com/smart-data-discovery.html">Smart Data Discovery</a></li>
+												<li><a href="https://modak.com/automated-data-ingestion.html">Automated Ingestion</a></li>
+												<li><a href="https://modak.com/data-unification.html">Data Unification</a></li>
+												<li><a href="https://modak.com/data-fingerprinting.html">Fingerprinting</a></li>
+												<li><a href="https://modak.com/data-anonymization.html">Anonymization</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="uk-nav-header">Product</li>
+								<li class="uk-parent">
+									<ul class="uk-nav-sub">
+										<li><a href="https://modak.com/nabu.html">nabu<span style='font-size:20px;'>&#174;</span></a></li>
+										
+									</ul>
+								</li>
+								<li class="uk-nav-header">Data lab</li>
+								<li class="uk-parent">
+									<ul class="uk-nav-sub">
+										<li><a href="https://modak.com/Botworks.html">BOTWorks</a></li>
+									</ul>
+								</li>
+								<li class="uk-nav-header">Resources</li>
+								<li class="uk-parent">
+									<ul class="uk-nav-sub">
+										<li><a href="https://modak.com/FHIR.html">FHIR</a></li>
+										<li><a href="https://modak.com/DataOps.html">DataOps</a></li>
+										<li><a href="https://modak.com/genome-studies.html">Genome Studies</a></li>
+										<li><a href="https://modak.com/pharma-research.html">Pharma R&D</a></li>
+												<li><a href="https://modak.com/pharma-firms.html">Pharma Firms</a></li>
+												<li><a href="https://modak.com/work-from-home.html">Work From Home</a></li>
+									</ul>
+								</li>
+								<li class="uk-nav-header">Careers</li>
+								<li class="uk-parent">
+									<ul class="uk-nav-sub">
+										<li><a href="https://modak.com/work-culture.html">Work Culture</a></li>
+										<li><a href="https://modak.com/life-modak.html">Life@Modak</a></li>
+										<li><a href="https://modak.com/employee-views.html">Employee views</a></li>
+										<li><a href="https://modak.com/current-openings.html">Current openings</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div id="header" class="uk-visible@l">
+			<div class="uk-position-relative">
+				<nav class="uk-navbar-container" uk-navbar="dropbar: true; mode: hover">
+					<a class="uk-navbar-item uk-logo" href="/">
+						<!--<img src="./img/logos/Modak Logo_FinalSVG.svg" id="modakLogo" alt="Modak" />-->
+						<img src="https://modak.com/img/logos/Modak%20Logo_FinalSVG.svg" id="modakLogo" alt="Modak" />
+						
+					</a>
+					<div class="uk-navbar-left">
+						<ul class="uk-navbar-nav">
+							<li>
+								<a href="javascript:void(0)">About us</a>
+								<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+									<div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li><a href="https://modak.com/about.html">About Modak</a></li>
+												<li><a href="https://modak.com/key-differentiator.html">Key Differentiator</a></li>
+												<li><a href="https://modak.com/global-presence.html">Global Presence</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Solutions</a>
+								<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+									<div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+													<li><a href="https://modak.com/managed-dataops.html">Managed DataOps</a></li>
+													<li><a href="https://modak.com/data-fabric.html">Data Fabric</a></li>
+												<li><a href="https://modak.com/Metaprogramming.html">Metaprogramming</a></li>
+												<li><a href="https://modak.com/governed-datalake.html">Governed Data Lake</a></li>
+												<li><a href="https://modak.com/data-visualisation.html">Data Visualization</a></li>
+												<li><a href="https://modak.com/data-migration.html">Data Migration</a></li>
+												<li><a href="https://modak.com/hadoop-managed-services.html">Hadoop Managed Services</a></li>
+											</ul>
+										</div>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li class="uk-active"><p style="margin-bottom:0">Augmented Data Preparation</p>
+													<ul class="uk-nav sub-nav">
+														<li><a href="https://modak.com/smart-data-discovery.html">Smart Data Discovery</a></li>
+														<li><a href="https://modak.com/automated-data-ingestion.html">Automated Ingestion</a></li>
+														<li><a href="https://modak.com/data-unification.html">Data Unification</a></li>
+														<li><a href="https://modak.com/data-fingerprinting.html">Fingerprinting</a></li>
+														<li><a href="https://modak.com/data-anonymization.html">Anonymization</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Product</a>
+								<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+									<div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li><a href="https://modak.com/nabu.html">nabu<span style='font-size:20px;'>&#174;</span></a></li>
+												
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Data Lab</a>
+								<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+									<div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li><a href="https://modak.com/Botworks.html">BOTWorks</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Resources</a>
+								<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+									<div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li><a href="https://modak.com/FHIR.html">FHIR</a></li>
+												<li><a href="https://modak.com/DataOps.html">DataOps</a></li>
+												<li><a href="https://modak.com/genome-studies.html">Genome Studies</a></li>
+												<li><a href="https://modak.com/pharma-research.html">Pharma R&D</a></li>
+												<li><a href="https://modak.com/pharma-firms.html">Pharma Firms</a></li>
+												<li><a href="https://modak.com/work-from-home.html">Work From Home</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Careers</a>
+								<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+									<div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li><a href="https://modak.com/work-culture.html">Work Culture</a></li>
+												<li><a href="https://modak.com/life-modak.html">Life@Modak</a></li>
+												<li><a href="https://modak.com/employee-views.html">Employee views</a></li>
+												<li><a href="https://modak.com/current-openings.html">Current openings</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="uk-navbar-right mr16">
+						<div>
+							<!-- <a class="uk-navbar-toggle" uk-search-icon href="#"></a> -->
+							<div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: 0">
+								<form class="uk-search uk-search-navbar uk-width-1-1">
+									<input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+								</form>
+							</div>
+						</div>
+						<a class="uk-button uk-button-primary Contactbutton" href="https://modak.com/contact-us.html">Contact us</a>
+					</div>
+				</nav>
+				<div class="uk-navbar-dropbar"></div>
+			</div>
+		</div>
+		<!-- /NAV -->
+		<!-- /TOP -->
+		<div class="content pt80 mh360" id="content" data-uk-height-viewport="expand: true">
+			<br><br><br>
+			<h3 class="uk-text-center">404 page not found</h3>
+		</div>
+		<!-- FOOTER -->
+		<div id="footer"></div> 
+		<div class="to-top" id="toTop">
+			<a href="#" id="js-scroll-trigger" uk-totop uk-scroll></a>
+		</div>
+		<!-- /FOOTER -->
+	</div>
+
+	<!-- JS FILES -->
+	<script src="https://modak.com/js/jquery-1.10.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+	<!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+	<script type="text/javascript" src="https://modak.com/js/scrolloverflow.js"></script>
+	<script type="text/javascript" src="https://modak.com/js/fullpage.js"></script>
+	<script>
+		let toTop = document.getElementById('toTop');
+		$(window).scroll(function () {
+			if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+				toTop.style.opacity = '1';
+			} else {
+				toTop.style.opacity = '0';
+			}
+		});
+		UIkit.util.on('#js-scroll-trigger', 'scrolled', function () {
+			toTop.style.opacity = '0';
+		});
+		window.onload = function () {
+			var spinner = document.getElementById('overlay');
+			spinner.classList.add('hide');
+			var mainPage = document.getElementById('mainPage');
+			mainPage.classList.add('show');
+		};
+	</script>
+</body>
+
+</html>

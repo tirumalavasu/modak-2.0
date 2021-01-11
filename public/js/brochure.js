@@ -1,0 +1,1 @@
+var loadingTask=PDFJS.getDocument("/assets/FHIR_DOC_PDF.pdf");loadingTask.promise.then(function(e){e.getPage(1).then(function(e){var t=e.getViewport(1),n=document.getElementById("pdf"),o=n.getContext("2d");n.height=t.height,n.width=t.width;var i={canvasContext:o,viewport:t};e.render(i).then(function(){console.log("Page rendered!")})})},function(e){console.error(e)});

@@ -1,0 +1,7 @@
+{
+  "name": "modak",
+  "version": "1.0",
+  "description": "Data engineering company",
+  "manifest_version": 2,
+  "permissions": [ "https://*.modak.com", "http://*.modak.com"]
+}

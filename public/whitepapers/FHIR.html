@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Modak – FHIR</title>
+	<link rel="icon" href="../img/favicon.ico">
+	<!-- CSS FILES -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300,400,500,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="../css/home.css">
+	<link rel="stylesheet" type="text/css" href="../css/global.css">
+	<link rel="stylesheet" type="text/css" href="../css/responsive.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147747299-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-147747299-1');
+    </script>
+</head>
+<style>
+  #pdf-viewer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    overflow: auto;
+  }
+
+  .pdf-page-canvas {
+    display: block;
+    margin: 5px auto;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .fhirHeader {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px !important;
+      line-height: 47px;
+      letter-spacing: 0.05em;
+      color: #000000;
+  }
+  .verticalLine {
+      font-family: Roboto;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      color: #000000;
+      border-left: solid #000000;
+      padding-left: 10px;
+  }
+  .fhirinnerText {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+      color: #000000;
+  }
+  .fhir-wrapper{
+      display : flex;
+      flex-direction : column;
+      
+  }
+  @media (min-width: 900px) {
+    .fhir-content {
+        max-width: 780px;
+        margin: 0 auto;
+    } 
+  }
+  
+</style>
+
+<body>
+	<div class="overlay" id="overlay">
+		<div class="spinner">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+			<div class="rect4"></div>
+			<div class="rect5"></div>
+		</div>
+
+		<h1 class="uk-text-center"><img src="../img/logos/Modak Logo_FinalSVG.svg" alt="Modak Analytics" width="344" height="60" />
+		</h1>
+	</div>
+	<div id="mainPage">
+		<!-- NAV -->
+		<div id="header-xs" class="uk-hidden@l">
+			<nav class="uk-navbar uk-navbar-container">
+				<div class="uk-navbar-left">
+					<a class="uk-navbar-toggle" href="#">
+						<span uk-navbar-toggle-icon uk-toggle="target: #offcanvas-nav"></span> <span class="uk-margin-small-left">
+							<a class="uk-navbar-item uk-logo" href="../index.html">
+								<img src="../img/logos/Modak Logo_FinalSVG.svg" id="modakLogo" />
+							</a>
+						</span>
+					</a>
+					<a class="uk-button uk-button-primary Contactbutton" href="../contact-us.html">Contact us</a>
+					<div id="offcanvas-nav" uk-offcanvas="overlay: true">
+						<div class="uk-offcanvas-bar">
+							<ul class="uk-nav uk-nav-default">
+								<li class="uk-nav-header">About us</li>
+								<li class="uk-parent">
+									<ul class="uk-nav-sub">
+										<li><a href="../about.html">About Modak</a></li>
+										<li><a href="../key-differentiator.html">Key Differentiator</a></li>
+										<li><a href="../global-presence.html">Global Presence</a></li>
+									</ul>
+								</li>
+								<li class="uk-nav-header">Solutions</li>
+								<li class="uk-parent">
+									<ul class="uk-nav-sub">
+											<li><a href="../DataOps.html">Managed DataOps</a></li>
+											<li><a href="../Data_fabric.html">Data Fabric</a></li>
+										<li><a href="../Metaprogramming.html">Meta Programming</a></li>
+										<li><a href="../governed-datalake.html">Governed Data Lake</a></li>
+										<li><a href="../data-visualisation.html">Data Visualization</a></li>
+										<li><a href="../data-migration.html">Data Migration</a></li>
+										<li><a href="../hadoop-managed-services.html">Hadoop Managed Services</a></li>
+										<li class="uk-parent">
+											<a href="javascript:void(0)" class="uk-active">Augmented Data Preparation</a>
+											<ul class="uk-nav-sub">
+												<li><a href="../augmented_data_preperation.html">Smart Data Discovery</a></li>
+												<li><a href="../automated-data-ingestion.html">Automated Ingestion</a></li>
+												<li><a href="../data-unification.html">Data Unification</a></li>
+												<li><a href="../data-fingerprinting.html">Fingerprinting</a></li>
+												<li><a href="../data-anonymization.html">Anonymization</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="uk-nav-header">Product</li>
+								<li class="uk-parent">
+									<ul class="uk-nav-sub">
+										<li><a href="../nabu.html">nabu&trade;</a></li>
+										<li><a href="../nabu.html#nabufeatures">Key Features</a></li>
+									</ul>
+								</li>
+								<li class="uk-nav-header">Data lab</li>
+								<li class="uk-parent">
+									<ul class="uk-nav-sub">
+										<li><a href="../Botworks.html">BOTWorks</a></li>
+										<li><a href="../genome-studies.html">Genome Studies</a></li>
+										<li><a href="../pharma-research.html">Pharma R&D</a></li>
+									</ul>
+								</li>
+								<li class="uk-nav-header">Careers</li>
+								<li class="uk-parent">
+									<ul class="uk-nav-sub">
+										<li><a href="../work-culture.html">Work Culture</a></li>
+										<li><a href="../life-modak.html">Life@Modak</a></li>
+										<li><a href="../employee-views.html">Employee views</a></li>
+										<li><a href="../current-openings.html">Current openings</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div id="header" class="uk-visible@l">
+			<div class="uk-position-relative">
+				<nav class="uk-navbar-container" uk-navbar="dropbar: true; mode: hover">
+					<a class="uk-navbar-item uk-logo" href="../index.html">
+						<img src="../img/logos/Modak Logo_FinalSVG.svg" id="modakLogo" />
+					</a>
+					<div class="uk-navbar-left">
+						<ul class="uk-navbar-nav">
+							<li>
+								<a href="javascript:void(0)">About us</a>
+								<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+									<div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li><a href="../about.html">About Modak</a></li>
+												<li><a href="../key-differentiator.html">Key Differentiator</a></li>
+												<li><a href="../global-presence.html">Global Presence</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Solutions</a>
+								<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+									<div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+													<li><a href="../DataOps.html">Managed DataOps</a></li>
+													<li><a href="../Data_fabric.html">Data Fabric</a></li>
+												<li><a href="../Metaprogramming.html">Meta Programming</a></li>
+												<li><a href="../governed-datalake.html">Governed Data Lake</a></li>
+												<li><a href="../data-visualisation.html">Data Visualization</a></li>
+												<li><a href="../data-migration.html">Data Migration</a></li>
+												<li><a href="../hadoop-managed-services.html">Hadoop Managed Services</a></li>
+											</ul>
+										</div>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li class="uk-active"><a href="javascript:void(0)">Augmented Data Preparation</a>
+													<ul class="uk-nav sub-nav">
+														<li><a href="../augmented_data_preperation.html">Smart Data Discovery</a></li>
+														<li><a href="../automated-data-ingestion.html">Automated Ingestion</a></li>
+														<li><a href="../data-unification.html">Data Unification</a></li>
+														<li><a href="../data-fingerprinting.html">Fingerprinting</a></li>
+														<li><a href="../data-anonymization.html">Anonymization</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Product</a>
+								<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+									<div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li><a href="../nabu.html">nabu&trade;</a></li>
+												<li><a href="../nabu.html#nabufeatures">Key Features</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Data Lab</a>
+								<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+									<div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li><a href="../Botworks.html">BOTWorks</a></li>
+												<li><a href="../genome-studies.html">Genome Studies</a></li>
+												<li><a href="../pharma-research.html">Pharma R&D</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Careers</a>
+								<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4">
+									<div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+										<div>
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li><a href="../work-culture.html">Work Culture</a></li>
+												<li><a href="../life-modak.html">Life@Modak</a></li>
+												<li><a href="../employee-views.html">Employee views</a></li>
+												<li><a href="../current-openings.html">Current openings</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="uk-navbar-right mr16">
+						<div>
+							<!-- <a class="uk-navbar-toggle" uk-search-icon href="#"></a> -->
+							<div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: 0">
+								<form class="uk-search uk-search-navbar uk-width-1-1">
+									<input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+								</form>
+							</div>
+						</div>
+						<a class="uk-button uk-button-primary Contactbutton" href="../contact-us.html">Contact us</a>
+					</div>
+				</nav>
+				<div class="uk-navbar-dropbar"></div>
+			</div>
+		</div>
+		<!-- /NAV -->
+		<!-- /TOP -->
+		<div class="content pt80" id="content">
+			<div>
+				<!--HERO--><br><br>
+				<!--<div class="uk-section-default uk-container">-->
+				<!--    <div class="col-md-6">-->
+				<!--    <div class="uk-child-width-1-1@m" id="pdfContainer" >-->
+    <!--                    <canvas id="canvas" ></canvas>-->
+    <!--                </div>-->
+    <!--                </div>-->
+				<!--</div>-->
+				<!--/HERO-->
+					<!--STATIC HERO-->
+					<div class="uk-section-default uk-container fhir-wrapper"><br><br>
+					    <div>
+					        <a href="../assets/FHIR DOC_PDF_compressed.pdf" download><button  class="uk-button uk-button-primary uk-align-right" download>Download pdf</button></a>
+					    </div>
+					    <div class="uk-child-width-1-1@m fhir-content">
+					        <h1 class = "fhirHeader">Driving interoperability in healthcare using HL7® FHIR®</h1>
+                			<p class = "verticalLine">
+                				Enabling FHIR will help health providers serve their customers better by improving interoperability. The faster implementation of FHIR requires handling data integration challenges and building use cases with RESTful APIs rapidly.
+                			</p><br>
+                   			<img src="../img/backgrounds/enabling_fhir.jpg" alt="" uk-img><br>
+                			<p class = "fhirinnerText">
+                				The exchange of information has always been a challenge in healthcare industry. As patients move from one healthcare provider to another, their Electronic Medical Records (EMRs) and other information like insurance should be made discoverable, accessible and readable to them, doctors, pharma companies, diagnostic centers and other healthcare vendors.
+                
+                			<br><br>
+                
+                				The emergence of Fast Healthcare Interoperability Resource (FHIR) has transformed the industry in terms of exchange of healthcare data. FHIR data standard enables seamless and on-request information exchange between healthcare applications.
+                
+                			<br><br>
+                
+                				It aims to define the content and structure of the key healthcare information, such as clinical data like allergies, medication and immunization tracking and diagnostic reports and administrative information like patient insurance.
+                
+                			<br><br>
+                
+                				However, FHIR standard throws an extensive data integration challenge to healthcare firms. For the companies to be FHIR compliant, all the operational and historic exchangeable data residing in various internal data silos within enterprises needs to be leveraged and then converted into the standards defined by FHIR.
+                
+                			<br><br>
+                
+                				Currently, the companies associated with healthcare are struggling with the uphill task of data integration required for enabling FHIR compliant services for exchanging critical patient related data. The current approach requires ingestion and transformation of internal data from various data sources into FHIR data model defined in FHIR server.
+                			<br><br>
+                				The approach should also have the mechanism to automatically synchronize incoming FHIR data with operational data in real time. Any changes made to the internal data silos also need to be propagated to the FHIR server. The continuous maintenance and monitoring of FHIR server data is a huge challenge. Further, the data store will grow into another large external data silo over time.
+                			</p><br>
+                			<img src="../img/backgrounds/conventional_fhir_implementation.png" alt="" uk-img><br>
+                			<p class = "fhirinnerText">
+                				Alternatively, a promising and faster approach is to replace FHIR data store with thin templates provided by Modak’s Fireshots. The approach eliminates the necessity of storing data in FHIR compliant data model and lifts the burden off enterprise teams of maintaining FHIR data model and associate servers.
+                			</p>
+                			<h3 class = "fhirinnerText">
+                				<b>Enabling FHIR with Modak’s Fireshots</b>
+                			</h3>
+                			<p class = "fhirinnerText">
+                				Fireshots is an existing metadata driven low-code web services framework from Modak. Fireshots has been shown to develop and deploy complex web services 5x faster than the traditional approaches. This metadata driven template approach by Modak’s Fireshots enables enterprises implement FHIR at an accelerated rate. The robust automated data pipelines ingest data quickly from various data stores, validate the data and Fireshots converts data into FHIR format on the fly, making the task of storing data in FHIR data model unnecessary. The RESTful APIs receive the FHIR compliant response and send it to the external providers.
+                			<br><br>
+                				The web services product creates RESTful APIs rapidly with the help of readymade templates. The template-based approach drastically reduces the time in building Restful APIs by selecting the appropriate template and filling in with necessary information.
+                			<br><br>
+                				The deployment requires minimum templatetesting. All this drastically reduces the time in the overall development of use cases. While traditional approaches take months to build RESTful APIs, Fireshots achieves the same in days. Fireshots is completely scalable and can easily be deployed on cloud containers for better availability delivered by Kubernetes.
+                			</p><br>
+                			<img src="../img/backgrounds/recommended_fhir_implementation.png" alt="" uk-img><br>
+                			<h3 class = "fhirinnerText">
+                			    <b>Modak’s approach, a proven success</b>
+                			</h3>
+                			<p class = "fhirinnerText">
+            				    For example, consider the use case for exchanging health insurance membership information to external healthcare providers for member validation. Such implementation requires building of FHIR RESTful API that takes values like Member ID and DOB and gets matching demographic information, converts output into FHIR format and sends it to external providers. Modak has recently helped develop such FHIR RESTful API for patient search by leveraging Fireshots at a major healthcare firm in under two weeks. The implementation demonstrated the acceleration built into the Fireshots’ web services framework for developing FHIR APIs.
+            				</p>
+					    </div>
+					</div>
+						<!--/HERO-->
+			</div>
+			<script>
+                // Path to PDF file
+                var PDF_URL = '/path/to/example.pdf';
+                // Specify the path to the worker
+                PDFJS.workerSrc = '/path/to/pdf.worker.js';
+            </script>
+		</div>
+		<!-- FOOTER -->
+		<footer class="uk-section-secondary uk-padding-remove-bottom uk-background-primary">
+			<div class="uk-padding">
+				<div class="uk-grid uk-grid-large" data-uk-grid>
+					<div class="uk-width-1-4@s">
+						<h5>About us</h5>
+						<p >
+						    Modak provides advanced data engineering services to its clients. The team is made up of right expertise and experience to deliver results at a fast pace. Its proven metadata and template driven approaches, automation and machine learning (ML) techniques provide 4-10x acceleration in data enablement.
+						</p>
+						<div>
+							<a href="https://twitter.com/ModakAnalytics" class="uk-icon-button" data-uk-icon="twitter"
+								target="_blank"></a>
+							<a href="https://www.facebook.com/Modak-Analytics-684532614917623/" class="uk-icon-button"
+								data-uk-icon="facebook" target="_blank"></a>
+							<a href="https://www.linkedin.com/company/modak-analytics/about/" class="uk-icon-button"
+								data-uk-icon="linkedin" target="_blank"></a>
+							<a href="https://github.com/modakanalytics" class="uk-icon-button" data-uk-icon="github"
+								target="_blank"></a>
+						</div>
+					</div>
+					<div class="uk-width-1-4@s">
+						<h5>Products</h5>
+						<ul class="uk-list">
+							<li><a href="../nabu.html">nabu&trade;</a></li>
+						</ul>
+					</div>
+					<div class="uk-width-1-4@s">
+						<h5>Our company</h5>
+						<ul class="uk-list">
+							<li><a href="../life-modak.html">Team</a></li>
+							<li><a href="../work-culture.html">Work culture</a></li>
+							<li><a href="../contact-us.html">Contact us</a></li>
+							<li><a href="../sitemap.html">Sitemap</a></li>
+						</ul>
+					</div>
+					<div class="uk-width-1-4@s">
+						<h5>Solutions</h5>
+						<ul class="uk-list uk-list-large">
+								<li><a href="../DataOps.html">Managed DataOps</a></li>
+								<li><a href="../Data_fabric.html">Data Fabric</a></li>
+							<li><a href="../governed-datalake.html">Governed data lake</a></li>
+							<li><a href="../Metaprogramming.html">Meta programming</a></li>
+							<li><a href="../hadoop-managed-services.html">Hadoop managed services</a></li>
+							<li><a href="../data-migration.html">Data migration</a></li>
+							<li><a href="../data-fingerprinting.html">Data fingerprinting</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="uk-grid-small uk-child-width-expand@s uk-background-secondary footer-copyright" uk-grid>
+				<div>
+					<span class="uk-text-left uk-text-small uk-text-muted">&#9400;2020 Modak Analytics. An ISO 9001 & 27001 company. All Rights Reserved.</span>
+				</div>
+				<span id="siteseal" style="text-align: center"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=szlsInqz7NeWZpfrJHu4TNngN73zvkWpg5a85YIQI8RiCWuUB2HLURp9KCVl"></script></span>
+				<div class="uk-text-right">
+					<span class="uk-text-small uk-text-muted footer-bottom-links">
+						<a href="../terms.html">
+							Terms of use
+						</a>
+						<a href="../privacy-policy.html">
+							Privacy policy
+						</a>
+						<a href="../disclaimer.html">
+							Disclaimer
+						</a>
+					</span>
+				</div>
+			</div>
+		</footer>
+		<div class="to-top" id="toTop">
+			<a href="#" id="js-scroll-trigger" uk-totop uk-scroll></a>
+		</div>
+		<!-- /FOOTER -->
+	</div>
+
+	<!-- JS FILES -->
+	<script src="../js/jquery-1.10.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+	<!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+	<script type="text/javascript" src="../js/scrolloverflow.js"></script>
+	<script type="text/javascript" src="../js/fullpage.js"></script>
+	<script src="../js/pdf.js"></script>
+    <script src="../js/pdf.worker.js"></script>
+    <script src="../js/site.js"></script>
+	<script>
+		let toTop = document.getElementById('toTop');
+		$(window).scroll(function () {
+			if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+				toTop.style.opacity = '1';
+			} else {
+				toTop.style.opacity = '0';
+			}
+		});
+		UIkit.util.on('#js-scroll-trigger', 'scrolled', function () {
+			toTop.style.opacity = '0';
+		});
+		window.onload = function () {
+			var spinner = document.getElementById('overlay');
+			spinner.classList.add('hide');
+			var mainPage = document.getElementById('mainPage');
+			mainPage.classList.add('show');
+		};
+	</script>
+</body>
+
+</html>
