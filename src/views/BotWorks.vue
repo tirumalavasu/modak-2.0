@@ -1,56 +1,116 @@
 <template>
   <div>
-    <Banner img="img/backgrounds/codes-monitor-programming.jpg" title="Metaprogramming" subTitle="Modak uses Metaprogramming approach to generate code through metadata, which is stored in a metadata respository. This approach significantly accelerates data and analytics processes." />
-    <div class="max-w-7xl mx-auto my-16">
-      <v-card class="my-4">
-        <h3 class="p-8 text-base font-normal text-gray-900">
-          Using Metaprogramming approach, Modak has gained a significant advantage in Data Analytics industry          
-        </h3>
-      </v-card>
+    <Banner img="img/backgrounds/bots.jpg" title="BOTWorks" subTitle="Bots are independent units with scalable functionality. They accelerate development of business logic by separating it from code and also help in easy integration of complex workflows" />
+    <div class="bg-gray-100">
+      <div class="max-w-7xl mx-auto py-16">
+        <v-img src="img/backgrounds/Bots_2.png" width="50%" class="mx-auto"></v-img>
+      </div>
     </div>
     <FeatureCard :feature="feature1" />
-    <div class="max-w-7xl mx-auto my-16">
-      <v-card class="my-4">
-        <h3 class="pt-8 px-8 text-base font-normal text-gray-900">
-          <strong>According to Gartner,</strong> more than 70% of big data projects have failed due to the large amount of time spent on data preparation and curation. Most businesses spend more time in generating insights using machine learning and automation. By the time the data reaches the visualization phase, either the data becomes outdated or the technology becomes outdated. At Modak, our metaprogramming approach focuses mainly on the data preparation phase. The metaprogramming approach drastically accelerates the data preparation and curation processes.
-        </h3>
-        <h3 class="p-8 text-base font-normal text-gray-900">
-          Metadata is essential for data preparation in any big data platform. It contains key information about the data. Modak's nabu metaprogramming approach leverages the metadata to ingest, curate and unify the data sets. Metaprogramming basically generates code through metadata, which we capture from the source and destination, save into technical, operational and business metadata catalogues.
-        </h3>
-      </v-card>
+    <div class="bg-gray-100">
+      <div class="max-w-7xl mx-auto py-16">
+        <h1 class="text-2xl font-bold text-gray-900 mb-4 text-left">Why Bots?</h1>
+        <div class="max-w-7xl mx-auto grid grid-cols-3 grid-rows-5 gap-8">
+          <v-card class="py-4 px-16 flex items-center" v-for="(item, i) in items" :key="i">
+            <img :src="item.icon" class="inline h-8 mr-4 fill-blue-500" />
+            <span>{{item.title}}</span>
+          </v-card>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-2 gap-8 mt-10">
+          <v-card class="py-6 px-16 flex items-center">
+            <img src="https://modak.com/img/icons/controlcenter.svg" class="inline h-8 mr-4 fill-blue-500" />
+            <span>Control center (Spin up, Pause, Stop Bots)</span>
+          </v-card>
+          <v-card class="py-6 px-16 flex items-center">
+            <img src="https://modak.com/img/icons/highvolumemessagehandling.svg" class="inline h-8 mr-4 fill-blue-500" />
+            <span>High volume messaging/High events handling</span>
+          </v-card>
+        </div>
+      </div>
     </div>
-    <FeatureCard :feature="feature2" />
   </div>
 </template>
 
 <script>
 import Banner from '@/components/common/Banner'
-// import TextCard from '@/components/common/TextCard'
 import FeatureCard from '@/components/common/FeatureCard'
 export default {
   name: 'ManagedDataops',
   components: {
     Banner,
-    // TextCard,
     FeatureCard
   },
   data () {
     return {
-      text: 'DataOps is a data enablement approach designed for rapid, reliable and repeatable delivery of ready-made data with fully operational analytics. Modak’s DataOps majorly consists of faster data enablement by using Modak’s approach of Data Preparation. Agile and smarter data engineering can handle large-scale data rapidly and efficiently is key to success.',
       feature1: {
-        img: 'img/backgrounds/laptop-analytics.jpg',
-        dir: 'left',
-        title: '',
-        description: 'Modak’s Metaprogramming approach is a clever technique which runs blocks of code on billions of rows and records at an instance. Modak’s Metaprogramming technique is capable enough to read, generate, analyze or transform other programs, and even modify itself while running.',
+        img: 'img/backgrounds/bot-img.jpg',
+        dir: 'right',
+        title: 'Smart Bots',
+        description: '<h3 class="text-base font-bold">Resilient and scalable</h3><br>Smart Bots are decentralized event-driven workflow engines, which can scale-up based on workload.<br><br>The core feature of bots is being asynchronous and able to run numerous tasks parallelly. Earlier, identifying a failed job and rerunning it was a nightmare for data ingestion and curation. Due to manual efforts involved in recurring the failed jobs, SLA breaches were quite frequent and tedious. However, bots are empowered to craft high-performance variants of themselves. They are the medium, mechanism, and platform for getting greater value from data analytics and augmented data preparation.',
         items: []
       },
-      feature2: {
-        img: 'img/backgrounds/blur-codes-coding.jpg',
-        dir: 'right',
-        title: '',
-        description: 'One of the benefits of metaprogramming is it increases the productivity of developers once they get past the convention and configuration phases. In metaprogramming, metadata is used in data ingestion, cascading templates and creating entities which is helpful for data visualization. Through meta programming approach, we follow a complete automated end-to-end process right from source to ingestion & curation, so that users can utilize optimized data for their process.',
-        items: []
-      }
+      items: [
+        {
+          icon: 'img/icons/decoupled.svg',
+          title: 'Fully decoupled'
+        },
+        {
+          icon: 'https://modak.com/img/icons/asynchronous.svg',
+          title: 'Asynchronous'
+        },
+        {
+          icon: 'https://modak.com/img/icons/stateless.svg',
+          title: 'Stateless Bot'
+        },
+        {
+          icon: 'https://modak.com/img/icons/stateful.svg',
+          title: 'Stateful message'
+        },
+        {
+          icon: 'https://modak.com/img/icons/polumorphic.svg',
+          title: 'Polymorphic'
+        },
+        {
+          icon: 'https://modak.com/img/icons/faulttolerant.svg',
+          title: 'Fault tolerant'
+        },
+        {
+          icon: 'https://modak.com/img/icons/gxp.svg',
+          title: 'Compliance to GxP'
+        },
+        {
+          icon: 'https://modak.com/img/icons/schemaindepedent.svg',
+          title: 'Schema independent'
+        },
+        {
+          icon: 'https://modak.com/img/icons/failurenotification.svg',
+          title: 'Failure notification'
+        },
+        {
+          icon: 'https://modak.com/img/icons/kafkabus.svg',
+          title: 'Persistence in the bus (Kafka)'
+        },
+        {
+          icon: 'https://modak.com/img/icons/monitoringandauditing.svg',
+          title: 'Monitoring, auditing & logging'
+        },
+        {
+          icon: 'https://modak.com/img/icons/regressionttesting.svg',
+          title: 'Intrinsic regression testing'
+        },
+        {
+          icon: 'https://modak.com/img/icons/distributedforautoscaling.svg',
+          title: 'Distributed for auto-scaling'
+        },
+        {
+          icon: 'https://modak.com/img/icons/metamessagesworkflow.svg',
+          title: 'Workflow using meta messages'
+        },
+        {
+          icon: 'https://modak.com/img/icons/robusterrorhandling.svg',
+          title: 'Robust error handling (Resilience)'
+        }
+      ]
     }    
   }
 };

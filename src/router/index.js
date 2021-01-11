@@ -45,12 +45,12 @@ const routes = [
     component: About
   },
   {
-    path: '/anonymization',
+    path: '/data-anonymization',
     name: 'Anonymization',
     component: Anonymization
   },
   {
-    path: '/automated-ingestion',
+    path: '/automated-data-ingestion',
     name: 'AutomatedIngestion',
     component: AutomatedIngestion
   },

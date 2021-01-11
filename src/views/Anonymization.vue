@@ -1,57 +1,61 @@
 <template>
   <div>
-    <Banner img="img/backgrounds/codes-monitor-programming.jpg" title="Metaprogramming" subTitle="Modak uses Metaprogramming approach to generate code through metadata, which is stored in a metadata respository. This approach significantly accelerates data and analytics processes." />
+    <Banner img="img/backgrounds/anonymisation-3.jpg" title="Anonymization" subTitle="Sanitizing information to comply with data privacy standards" />
     <div class="max-w-7xl mx-auto my-16">
-      <v-card class="my-4">
-        <h3 class="p-8 text-base font-normal text-gray-900">
-          Using Metaprogramming approach, Modak has gained a significant advantage in Data Analytics industry          
+      <v-card class="my-4 p-8">
+        <h1 class="text-2xl font-bold text-gray-900">
+          Data Anonymization
+        </h1>
+        <h3 class="text-base font-normal text-gray-900 mt-2">The goal of the anonymization routines is to anonymize and de-identify the protected health information in the clinical trial datasets based on the rules defined by HIPPA and by compliance legal department of the company.</h3>
+      </v-card>
+    </div>
+    <div class="max-w-7xl mx-auto my-16">
+      <h1 class="text-2xl font-bold text-gray-900 mb-4">
+        Use Machine Learning to Automate Anonymization
+      </h1>    
+      <v-img src="img/backgrounds/ML-Anonymize.png"></v-img>
+      <p class="w-full text-center">The machine identifies and applies the last applied rules bypassing data classification and user review.</p>
+    </div>
+    <div class="max-w-7xl mx-auto my-16">
+      <v-card class="p-8 my-4">
+        <h1 class="text-2xl font-bold text-gray-700 my-2 text-left">Data Anonymization</h1>
+        <h3 class="text-base font-normal text-gray-900">
+          We make use of “NLP POS” recognition and named entity extractions to annotate the unstructured data.
+        </h3>
+        <ul class="list-unstyled">
+          <li><v-icon>mdi-check</v-icon> NLP POS Recognition</li>
+          <li><v-icon>mdi-check</v-icon> Named Entity Extractions</li>
+          <li><v-icon>mdi-check</v-icon> Master Data Elements</li>
+        </ul>
+      </v-card>
+    </div>    
+    <div class="max-w-7xl mx-auto my-16">
+      <h1 class="text-2xl font-bold text-gray-900 mb-4">
+        Machine Learning Training for Document/Sentence Classification
+      </h1>    
+      <v-img src="img/backgrounds/Unstructured-anonymy.png"></v-img>
+      <p class="w-full text-center">The machine identifies and applies the last applied rules bypassing data classification and user review.</p>
+    </div>
+    <div class="max-w-7xl mx-auto my-16">
+      <v-card class="p-8">        
+        <h1 class="text-2xl font-bold text-gray-700 mb-4 text-left">How is Anonymization useful?</h1>
+        <h3 class="text-base font-normal text-gray-900 my-4">
+          In this process, the comparison of column values is done across different tables and a hash code against the column is generated. Irrespective of what the column name is labeled across different tables, if the column shares the same data, then a score will be generated from 0 to 1 based on how much data is matched. Then, the mapping of the data will be done and the data will be merged. This score will be generated using an algorithm.
+        </h3>
+        <h3 class="text-base font-normal text-gray-900">
+          For example, if there are different tables where the column is labeled as “col”,” column”,”col1”, but the data which is shared in the columns are same, then the data is checked. A hash will be generated against that column, a score between 0 to 1 is generated and then the mapping of the data takes place by merging the columns.
         </h3>
       </v-card>
     </div>
-    <FeatureCard :feature="feature1" />
-    <div class="max-w-7xl mx-auto my-16">
-      <v-card class="my-4">
-        <h3 class="pt-8 px-8 text-base font-normal text-gray-900">
-          <strong>According to Gartner,</strong> more than 70% of big data projects have failed due to the large amount of time spent on data preparation and curation. Most businesses spend more time in generating insights using machine learning and automation. By the time the data reaches the visualization phase, either the data becomes outdated or the technology becomes outdated. At Modak, our metaprogramming approach focuses mainly on the data preparation phase. The metaprogramming approach drastically accelerates the data preparation and curation processes.
-        </h3>
-        <h3 class="p-8 text-base font-normal text-gray-900">
-          Metadata is essential for data preparation in any big data platform. It contains key information about the data. Modak's nabu metaprogramming approach leverages the metadata to ingest, curate and unify the data sets. Metaprogramming basically generates code through metadata, which we capture from the source and destination, save into technical, operational and business metadata catalogues.
-        </h3>
-      </v-card>
-    </div>
-    <FeatureCard :feature="feature2" />
   </div>
 </template>
 
 <script>
 import Banner from '@/components/common/Banner'
-// import TextCard from '@/components/common/TextCard'
-import FeatureCard from '@/components/common/FeatureCard'
 export default {
-  name: 'ManagedDataops',
+  name: 'Anonamization',
   components: {
-    Banner,
-    // TextCard,
-    FeatureCard
-  },
-  data () {
-    return {
-      text: 'DataOps is a data enablement approach designed for rapid, reliable and repeatable delivery of ready-made data with fully operational analytics. Modak’s DataOps majorly consists of faster data enablement by using Modak’s approach of Data Preparation. Agile and smarter data engineering can handle large-scale data rapidly and efficiently is key to success.',
-      feature1: {
-        img: 'img/backgrounds/laptop-analytics.jpg',
-        dir: 'left',
-        title: '',
-        description: 'Modak’s Metaprogramming approach is a clever technique which runs blocks of code on billions of rows and records at an instance. Modak’s Metaprogramming technique is capable enough to read, generate, analyze or transform other programs, and even modify itself while running.',
-        items: []
-      },
-      feature2: {
-        img: 'img/backgrounds/blur-codes-coding.jpg',
-        dir: 'right',
-        title: '',
-        description: 'One of the benefits of metaprogramming is it increases the productivity of developers once they get past the convention and configuration phases. In metaprogramming, metadata is used in data ingestion, cascading templates and creating entities which is helpful for data visualization. Through meta programming approach, we follow a complete automated end-to-end process right from source to ingestion & curation, so that users can utilize optimized data for their process.',
-        items: []
-      }
-    }    
+    Banner
   }
 };
 </script>
